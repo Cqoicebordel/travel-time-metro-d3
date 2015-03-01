@@ -1,4 +1,4 @@
-var pixelsPerMinute = 800.0/4800.0;
+var pixelsPerMinute = window.innerWidth/4800.0;
 var donnees = [['Métro parisien', 'data/metro-paris/stations.csv', 'data/metro-paris/routes.csv', 'data/metro-paris/lines.csv'],
     ['Métro RER TRAM Paris', 'data/metro-rer-tram-paris/stations.csv', 'data/metro-rer-tram-paris/routes.csv', 'data/metro-rer-tram-paris/lines.csv']];
 
@@ -23,8 +23,8 @@ function createGraph(idData) {
 
     d3.csv(donnees[idData][1], function(stations) {
     
-        var w = 800,
-            h = 500,
+        var w = window.innerWidth,
+            h = window.innerHeight,
             minLat = 90, 
             minLon = 180, 
             maxLat = -90, 

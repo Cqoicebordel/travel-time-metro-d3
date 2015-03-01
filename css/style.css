@@ -1,16 +1,38 @@
 body {
-    margin: auto;
-    padding: 1em;
-    width: 800px;
+    margin: 0;
+    width: 100%;
 }
+
+header {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    float: left;
+    opacity: 0.8;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+header > * {margin: 0 0 1rem 0;}
 
 #map {
-    width: 800px;
-    height: 500px;
     border: 1px solid #aaa;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -100;
 }
 
-line,
-circle.connect {
-	vector-effect: non-scaling-stroke;
+line, circle.connect {vector-effect: non-scaling-stroke;}
+
+article {
+    margin: auto;
+    width: 32em;
+}
+
+article > header {
+    border: none;
+    padding: 0;
 }
